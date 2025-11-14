@@ -1,2 +1,0 @@
-This is a line written to the file.
-Writing more text to the file.
