@@ -1,24 +1,19 @@
 #include <iostream>
+
 #include <fstream>
+
 using namespace std;
 
 int main() {
-    ifstream inFile;
-    string line;
 
-    inFile.open("output.txt");
+ifstream fin("sample.txt");
 
-    if (!inFile) {
-        cout << "Error opening file for reading." << endl;
-        return 1;
-    }
+string line;
 
-    cout << "Contents of the file:" << endl;
-    while (getline(inFile, line)) {
-        cout << line << endl;
-    }
+while(getline(fin, line)) cout << line << endl;
 
-    inFile.close();
+fin.close();
 
-    return 0;
+return 0;
+
 }

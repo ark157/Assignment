@@ -1,23 +1,19 @@
 #include <iostream>
+
 #include <fstream>
+
 using namespace std;
 
 int main() {
-    ofstream outFile;
 
-    outFile.open("output.txt");
 
-    if (!outFile) {
-        cout << "Error opening file for writing." << endl;
-        return 1;
-    }
+ofstream fout("sample.txt");
 
-    outFile << "This is a line written to the file." << endl;
-    outFile << "Writing more text to the file." << endl;
+fout << "This is a sample file.";
 
-    outFile.close();
+fout.close();
 
-    cout << "Data written to file successfully." << endl;
+cout << "File written successfully.";
 
-    return 0;
+return 0;
 }
